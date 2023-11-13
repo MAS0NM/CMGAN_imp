@@ -1,0 +1,4 @@
+*.bin
+*.onnx
+*.xml
+__pycache__
