@@ -130,7 +130,6 @@ def do_inf(wave, compiled_model, frame_size):
         audio = post_process(torch.tensor(real).to(0), torch.tensor(imag).to(0), c, length)
         audio_segs.append(audio)
     audio = np.concatenate(audio_segs)[:L]
-    
     print(f'output audio shape: {audio.shape}')
     sf.write(f'./exp_{frame_size}.wav', audio, samplerate=16000)
 
